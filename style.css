@@ -1,0 +1,25 @@
+:root { --verde-oliva: #556B2F; --dourado-fosco: #C5A059; --fundo: #FDFBF7; }
+
+body { margin: 0; font-family: 'Cinzel', serif; overflow: hidden; height: 100vh; display: flex; justify-content: center; align-items: center; }
+
+#loader { text-align: center; background: rgba(255,255,255,0.9); padding: 40px; border-radius: 20px; }
+
+.galeria-fundo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+.foto-fundo { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; animation: flutuar 36s infinite; }
+.foto-fundo:nth-child(1) { animation-delay: 0s; }
+.foto-fundo:nth-child(2) { animation-delay: 6s; }
+.foto-fundo:nth-child(3) { animation-delay: 12s; }
+.foto-fundo:nth-child(4) { animation-delay: 18s; }
+.foto-fundo:nth-child(5) { animation-delay: 24s; }
+.foto-fundo:nth-child(6) { animation-delay: 30s; }
+
+@keyframes flutuar { 0%, 100% { opacity: 0; transform: scale(1); } 15%, 85% { opacity: 0.5; transform: scale(1.05); } }
+
+.convite-container { background: rgba(253, 251, 247, 0.85); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; text-align: center; width: 90%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+h1 { color: var(--verde-oliva); font-size: 2.5rem; margin-bottom: 10px; }
+.data { color: var(--dourado-fosco); letter-spacing: 3px; margin-bottom: 20px; }
+.pergunta { font-size: 1.2rem; color: var(--verde-oliva); margin: 30px 0; min-height: 1.5em; }
+.btn { padding: 15px 40px; border-radius: 50px; border: 1px solid var(--dourado-fosco); background: transparent; color: var(--dourado-fosco); cursor: pointer; transition: 0.4s; font-family: 'Montserrat', sans-serif; }
+.btn:hover { background: var(--dourado-fosco); color: white; }
+.particula { position: fixed; top: -20px; z-index: 3000; pointer-events: none; animation: cair linear forwards; font-size: 20px; }
+@keyframes cair { to { transform: translateY(110vh) rotate(360deg); } }

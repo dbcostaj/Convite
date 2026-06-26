@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daiane & David - Convite Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fundo de Galeria Flutuante -->
+    <div class="galeria-fundo">
+        <div class="foto-fundo" style="background-image: url('foto1.jpg');"></div>
+        <div class="foto-fundo" style="background-image: url('foto2.jpg');"></div>
+        <div class="foto-fundo" style="background-image: url('foto3.jpg');"></div>
+        <div class="foto-fundo" style="background-image: url('foto4.jpg');"></div>
+        <div class="foto-fundo" style="background-image: url('foto5.jpg');"></div>
+        <div class="foto-fundo" style="background-image: url('foto6.jpg');"></div>
+    </div>
+
+    <!-- Tela de Entrada -->
+    <div id="loader">
+        <h1>Daiane & David</h1>
+        <button class="btn" onclick="iniciarTudo()">Abrir Convite</button>
+    </div>
+
+    <!-- Conteúdo do Convite -->
+    <div class="convite-container" id="convite" style="display: none;">
+        <h1>Daiane & David</h1>
+        <div class="data">21 de Novembro de 2026</div>
+        <div class="texto-mensagem">
+            <p id="mensagem-personalizada"></p>
+        </div>
+        <div class="pergunta" id="pergunta-convite"></div>
+        <div class="botoes-container">
+            <button class="btn btn-aceito" onclick="confirmarPresenca()">Sim, aceito!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
